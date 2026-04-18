@@ -60,9 +60,9 @@ header {
     width: 100%;
     padding: 15px 0;
     text-align: center;
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     z-index: 1000;
     border-bottom: 1px solid rgba(0,0,0,0.1);
 }
