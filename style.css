@@ -133,3 +133,17 @@ article h2{
         padding: 8px;
     }
 }
+
+footer {
+    width: 75%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+    padding: 20px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    font-weight: bold;
+}
