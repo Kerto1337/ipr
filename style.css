@@ -15,7 +15,7 @@ body {
 }
 
 .element {
-    margin-top: 5%;
+    margin-top: 3rem;
     flex: 1 1 250px;
     max-width: 300px;
     background: white;
