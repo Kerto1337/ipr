@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IPR</title>
+    <title>Co kupić</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/fav.png" type="image/x-icon">
+    
+
 </head>
 <body>
 
     <header>
-        <h1>Lista produktów</h1>
+        <h1 id="te">Lista produktów</h1>
     </header>
 
 <div id="container">
@@ -128,5 +130,37 @@
     <footer>
         <p>2026 &copy <span>P</span>iotr <span>W</span>ilczyński</p> 
     </footer>
+
+    <script>
+        const h1 = document.getElementById('te');
+
+        let currentState = null;
+
+        window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const docHeight = document.documentElement.scrollHeight;
+
+        const scrollPercent = scrollTop / (docHeight - windowHeight);
+
+        let newState;
+
+        if (scrollPercent < 0.30) {
+            newState = 1;
+        } else if (scrollPercent < 0.60) {
+            newState = 2;
+        } else {
+            newState = 3;
+        }
+
+        if (newState !== currentState) {
+            currentState = newState;
+
+            if (newState === 1) h1.textContent = "Lista produktów";
+            if (newState === 2) h1.textContent = "Kosztorys";
+            if (newState === 3) h1.textContent = "Dlaczego te urządzenia";
+        }
+    });
+    </script>
 </body>
 </html>
