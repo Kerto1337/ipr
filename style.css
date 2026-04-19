@@ -70,7 +70,7 @@ header {
     border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-section article:hover{
+.art:hover{
     transform: translateY(-10px);
 }
 
